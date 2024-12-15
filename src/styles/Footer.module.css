@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Public Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 0.8rem;
+    height: 5%;
+    max-height: 50px;
+    width: 100%;
+    border: 1px solid var(--borderGrey);
+    color: rgb(134, 134, 134);
+}
