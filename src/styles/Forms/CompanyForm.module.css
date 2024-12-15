@@ -1,0 +1,240 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.uploadsCon {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    border-bottom: 1px solid var(--borderGrey);
+    margin-bottom: 1rem;
+}
+
+.uploads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.uploads span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+.logoUpload,
+.bannerUpload {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.logoUpload {
+    flex: 1 1 auto;
+}
+
+
+.bannerUpload {
+    flex: 3 1 auto;
+}
+
+
+.uploadIcon {
+    font-size: 1.5rem;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+
+.uploadInfo {
+    font-size: 0.8rem;
+    max-width: 250px;
+    color: grey;
+    text-align: center;
+}
+
+
+.uploadText {
+    font-size: 0.9rem;
+    font-weight: 500;
+    max-width: 250px;
+    color: #333;
+    text-align: center;
+}
+
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dotted var(--borderGrey);
+    border-radius: 10px;
+    padding: 50px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    height: 150px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+
+.bannerUpload .label {
+    border: 3px solid var(--borderGrey);
+}
+
+
+.label:hover {
+    border-color: #007bff;
+    background-color: #e6f7ff;
+}
+
+
+.companyInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.companyName {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.companyName label {
+    font-size: 1rem;
+}
+
+.companyName input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aboutUs label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.reactQuill {
+    min-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reactQuill div {
+    border: none !important;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .uploads {
+        flex-direction: column;
+    }
+
+    .logoUpload,
+    .bannerUpload {
+        min-width: 100%;
+    }
+
+    .uploadIcon {
+        font-size: 2rem;
+    }
+
+    .uploadText {
+        font-size: 1rem;
+    }
+
+    .uploadInfo {
+        font-size: 0.9rem;
+    }
+
+    .label {
+        padding: 30px 20px;
+        height: 120px;
+    }
+
+    .companyNama input {
+        font-size: 0.9rem;
+    }
+
+    .aboutUs label {
+        font-size: 1.1rem;
+    }
+
+    .ReactQuill {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .uploads {
+        flex-direction: column;
+    }
+
+    .logoUpload,
+    .bannerUpload {
+        min-width: 100%;
+    }
+
+    .uploadIcon {
+        font-size: 2.5rem;
+    }
+
+    .uploadText {
+        font-size: 1.1rem;
+    }
+
+    .uploadInfo {
+        font-size: 1rem;
+    }
+
+    .label {
+        padding: 25px 20px;
+        height: 100px;
+    }
+
+    .companyNama input {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .aboutUs label {
+        font-size: 1.2rem;
+    }
+
+    .ReactQuill {
+        min-height: 180px;
+        font-size: 1rem;
+    }
+}

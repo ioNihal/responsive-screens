@@ -3,14 +3,17 @@ import './App.css'
 import Footer from './components/Footer'
 import Form from './components/Form'
 import Header from './components/Header'
+import { ProgressProvider } from './components/ProgressContext'
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Form />
-      <Footer />
+      <ProgressProvider>
+        <Header />
+        <Form />
+        <Footer />
+      </ProgressProvider>
     </>
   )
 }

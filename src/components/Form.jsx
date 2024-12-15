@@ -1,32 +1,67 @@
-import { AiOutlineUser } from 'react-icons/ai'
-import styles from '../styles/Form.module.css'
-import { FaRegUserCircle } from 'react-icons/fa'
-import { GoGlobe } from 'react-icons/go'
-import { PiAt } from 'react-icons/pi'
+import { AiOutlineUser } from 'react-icons/ai';
+import styles from '../styles/Form.module.css';
+import { FaRegUserCircle } from 'react-icons/fa';
+import { GoArrowRight, GoGlobe } from 'react-icons/go';
+import { PiAt } from 'react-icons/pi';
+import { useProgress } from './ProgressContext';
+import CompanyForm from './Forms/CompanyForm';
+import FoundingForm from './Forms/FoundingForm';
+import SocialForm from './Forms/SocialForm';
+import ContactForm from './Forms/ContactForm';
 
 const Form = () => {
+    const { step, setStep, nextStep, prevStep, } = useProgress();
+
     return (
         <main className={styles.container}>
-            <ul className={styles.navbar}>
-                <li className={styles.navItem}>
+            <div className={styles.navbar}>
+                <button
+                    className={`${styles.navItem} ${step === 1 ? `${styles.active}` : ""}`}
+                    onClick={() => setStep(1)}
+                >
                     <AiOutlineUser />
-                    <span>Company Info</span>
-                </li>
-                <li className={styles.navItem}>
+                    Company Info
+                </button>
+                <button
+                    className={`${styles.navItem} ${step === 2 ? `${styles.active}` : ""}`}
+                    onClick={() => setStep(2)}
+                >
                     <FaRegUserCircle />
-                    <span>Founding Info</span>
-                </li>
-                <li className={styles.navItem}>
+                    Founding Info
+                </button>
+                <button
+                    className={`${styles.navItem} ${step === 3 ? `${styles.active}` : ""}`}
+                    onClick={() => setStep(3)}
+                >
                     <GoGlobe />
-                    <span>Social Media Profile</span>
-                </li>
-                <li className={styles.navItem}>
+                    Social Media Profile
+                </button>
+                <button
+                    className={`${styles.navItem} ${step === 4 ? `${styles.active}` : ""}`}
+                    onClick={() => setStep(4)}
+                >
                     <PiAt />
-                    <span>Contact</span>
-                </li>
-            </ul>
+                    Contact
+                </button>
+            </div>
+
+            <div className={styles.formContainer}>
+                {step === 1 && <CompanyForm />}
+                {step === 2 && <FoundingForm />}
+                {step === 3 && <SocialForm />}
+                {step === 4 && <ContactForm />}
+            </div>
+
+            <div className={styles.pagination}>
+                <button onClick={prevStep} disabled={step === 1} className={styles.prevBtn}>
+                    Previous
+                </button>
+                <button onClick={nextStep} disabled={step === 4} className={styles.nextBtn}>
+                    Save & Next <GoArrowRight />
+                </button>
+            </div>
         </main>
-    )
+    );
 }
 
-export default Form
+export default Form;

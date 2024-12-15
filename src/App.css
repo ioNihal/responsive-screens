@@ -1,13 +1,56 @@
-#root {
-  max-width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
+header, footer {
+  width: 100%;
+  text-align: center;
+}
 
+
+@media (max-width: 768px) {
+  #root {
+    padding: 10px;
+  }
+  
+  header {
+    font-size: 1.2em;
+  }
+  
+  footer {
+    font-size: 0.9em;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  header {
+    font-size: 1em;
+  }
+  
+  footer {
+    font-size: 0.8em;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
