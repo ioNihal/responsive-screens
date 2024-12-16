@@ -1,0 +1,147 @@
+.container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    gap: 1rem;
+}
+
+.row label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 1px 0;
+}
+
+.inputWrapper:active,
+.inputWrapper:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.inputWrapper input {
+    flex: 5;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputWrapper input::placeholder {
+    color: #aaa;
+}
+
+.inputWrapper input:focus {
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.inputWrapper select {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: 550;
+    border: none;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.inputWrapper select option {
+    padding: 10px;
+}
+
+.selectWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.platformIcon {
+    font-size: 1.5rem;
+    color: #0b37ff;
+    position: absolute;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 18px;
+    color: #888;
+}
+
+.inputIcon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #007bff;
+    pointer-events: none;
+}
+
+.inputWrapper>input {
+    padding-left: 35px;
+}
+
+.location,
+.phone {
+    padding-left: 15px !important;
+}
+
+@media (max-width: 600px) {
+    .row {
+        margin-bottom: 10px;
+    }
+
+    .inputWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inputWrapper input,
+    .inputWrapper select {
+        width: 100%;
+    }
+
+    .platformIcon {
+        position: relative;
+        left: 0;
+    }
+
+    .arrow {
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
+    }
+}

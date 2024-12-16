@@ -29,9 +29,11 @@
     justify-content: center;
     width: 100%;
     border: 1px solid #ddd;
+    padding: 1px 0;
 }
 
-.inputWrapper:active, .inputWrapper:hover {
+.inputWrapper:active,
+.inputWrapper:hover {
     outline: none;
     border-color: #007bff;
 }
@@ -45,7 +47,7 @@
 
 .selectWrapper select {
     width: 100%;
-    padding: 15px;
+    padding: 5px 10px;
     padding-left: 35px;
     font-size: 0.9rem;
     font-weight: 550;
@@ -96,7 +98,7 @@ input:focus {
     justify-content: center;
     color: rgb(43, 43, 43);
     font-size: 1.5rem;
-    padding: calc(37px - 1.5rem);
+    padding: calc(38px - 1.5rem);
 }
 
 .removeIcon:hover {

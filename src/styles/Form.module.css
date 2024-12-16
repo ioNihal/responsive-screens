@@ -8,7 +8,6 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    margin-bottom: 2rem;
 }
 
 .navbar {
@@ -53,7 +52,7 @@
 .prevBtn,
 .nextBtn {
     all: unset;
-    padding: 20px 25px;
+    padding: 15px 25px;
     border: 1px solid var(--borderGrey);
     cursor: pointer;
     border-radius: 5px;
@@ -68,6 +67,10 @@
 
 .prevBtn:hover {
     background-color: #d6d6d6;
+}
+
+.hide {
+    display: none;
 }
 
 .nextBtn {

@@ -53,7 +53,7 @@ const Form = () => {
             </div>
 
             <div className={styles.pagination}>
-                <button onClick={prevStep} disabled={step === 1} className={styles.prevBtn}>
+                <button onClick={prevStep} disabled={step === 1} className={`${styles.prevBtn} ${step === 1 ? `${styles.hide}` : ""}`}>
                     Previous
                 </button>
                 <button onClick={nextStep} disabled={step === 4} className={styles.nextBtn}>
