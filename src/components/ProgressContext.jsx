@@ -14,7 +14,7 @@ export const ProgressProvider = ({ children }) => {
         if (step > 1) setStep(step - 1);
     };
 
-    const progress = (step / 4) * 100;
+    const progress = ((step - 1) / 4) * 100;
 
     return (
         <ProgressContext.Provider value={{ step, setStep, nextStep, prevStep, progress }}>

@@ -1,0 +1,111 @@
+.container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.input label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.selectWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.selectWrapper select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888;
+}
+
+.inputWrapper,
+.dateWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.inputWrapper input,
+.dateWrapper input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.inputIcon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #007bff;
+    pointer-events: none;
+}
+
+.inputWrapper input[type="text"] {
+    padding-left: 35px;
+    padding-bottom: 17px;
+}
+
+.inputWrapper input:focus,
+.selectWrapper select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.texteditor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.texteditor label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.reactQuill {
+    min-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reactQuill div {
+    border: none !important;
+}
