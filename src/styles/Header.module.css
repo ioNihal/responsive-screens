@@ -43,6 +43,10 @@
     font-style: normal;
 }
 
+.progressInfo :nth-child(2) {
+    color: var(--blue);
+}
+
 .progressBar {
     width: 100%;
 }
