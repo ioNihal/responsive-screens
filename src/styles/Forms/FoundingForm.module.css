@@ -62,6 +62,7 @@
     border: 1px solid rgb(197, 197, 197);
     border-radius: 5px;
     box-sizing: border-box;
+    margin: 0;
 }
 
 .dateWrapper input {
@@ -78,7 +79,7 @@
 }
 
 .inputWrapper input[type="text"] {
-    padding-left: 35px;
+    eft:padding-l 35px;
     padding-bottom: 17px;
 }
 
