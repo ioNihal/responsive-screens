@@ -102,11 +102,11 @@ const FoundingForm = () => {
                 </div>
             </div>
             <div className={styles.texteditor}>
-                <label htmlFor="about-us" style={{ fontWeight: 'bold', display: 'block' }}>
+                <label htmlFor="c-vision" style={{ fontWeight: 'bold', display: 'block' }}>
                     Company Vision
                 </label>
                 <ReactQuill
-                    id="about-us"
+                    id="c-vision"
                     theme="snow"
                     value={content}
                     onChange={handleChange}

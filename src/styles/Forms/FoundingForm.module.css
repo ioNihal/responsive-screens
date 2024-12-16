@@ -64,6 +64,10 @@
     box-sizing: border-box;
 }
 
+.dateWrapper input {
+    cursor: pointer;
+}
+
 .inputIcon {
     position: absolute;
     top: 50%;
@@ -78,7 +82,9 @@
     padding-bottom: 17px;
 }
 
+
 .inputWrapper input:focus,
+.dateWrapper input:focus,
 .selectWrapper select:focus {
     outline: none;
     border-color: #007bff;
@@ -101,9 +107,13 @@
     min-height: 150px;
     display: flex;
     justify-content: space-between;
-    flex-direction: column-reverse;  
+    flex-direction: column-reverse;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.reactQuill:active {
+    border-color: #007bff;
 }
 
 .reactQuill div {

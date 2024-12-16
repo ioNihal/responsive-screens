@@ -111,6 +111,7 @@
     flex-direction: column;
     gap: 1rem;
 }
+
 .companyName label {
     font-size: 1rem;
 }
@@ -122,11 +123,17 @@
     border-radius: 5px;
 }
 
+.companyName input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
 .aboutUs {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
+
 
 .aboutUs label {
     font-size: 1rem;
@@ -139,9 +146,13 @@
     min-height: 150px;
     display: flex;
     justify-content: space-between;
-    flex-direction: column-reverse;  
+    flex-direction: column-reverse;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.reactQuill:active {
+    border-color: #007bff;
 }
 
 .reactQuill div {
