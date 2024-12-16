@@ -8,13 +8,14 @@ import CompanyForm from './Forms/CompanyForm';
 import FoundingForm from './Forms/FoundingForm';
 import SocialForm from './Forms/SocialForm';
 import ContactForm from './Forms/ContactForm';
+import Completed from './Completed';
 
 const Form = () => {
     const { step, setStep, nextStep, prevStep, } = useProgress();
 
     return (
         <main className={styles.container}>
-            <div className={styles.navbar}>
+            <div className={`${styles.navbar} ${step === 5 ? `${styles.hide}` : ""}`}>
                 <button
                     className={`${styles.navItem} ${step === 1 ? `${styles.active}` : ""}`}
                     onClick={() => setStep(1)}
@@ -44,24 +45,27 @@ const Form = () => {
                     Contact
                 </button>
             </div>
+            {
+                step === 5 ? (<Completed />) :
+                    (
+                        <div className={styles.formContainer}>
+                            {step === 1 && <CompanyForm />}
+                            {step === 2 && <FoundingForm />}
+                            {step === 3 && <SocialForm />}
+                            {step === 4 && <ContactForm />}
+                        </div>
+                    )
+            }
 
-            <div className={styles.formContainer}>
-                {step === 1 && <CompanyForm />}
-                {step === 2 && <FoundingForm />}
-                {step === 3 && <SocialForm />}
-                {step === 4 && <ContactForm />}
-            </div>
-
-            <div className={styles.pagination}>
+            <div className={`${styles.pagination} ${step === 5 ? `${styles.hide}` : ""}`}>
                 <button onClick={prevStep} disabled={step === 1} className={`${styles.prevBtn} ${step === 1 ? `${styles.hide}` : ""}`}>
                     Previous
                 </button>
-                <button onClick={nextStep} disabled={step === 4} className={styles.nextBtn}>
-                    Save & Next <GoArrowRight />
+                <button onClick={nextStep} disabled={step === 5} className={styles.nextBtn}>
+                    {step === 4 ? "Finish Editing" : "Save & Next"} <GoArrowRight />
                 </button>
             </div>
         </main>
-    );
+    )
 }
-
 export default Form;

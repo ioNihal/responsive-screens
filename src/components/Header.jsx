@@ -15,7 +15,7 @@ const Header = () => {
             <div className={styles.progressContainer}>
                 <div className={styles.progressInfo}>
                     <span>Setup Progress</span>
-                    <span>{Math.round(progress)}% Completed</span>
+                    {step === 1 ? "" : (<span>{Math.round(progress)}% Completed</span>)}
                 </div>
                 <div className={styles.progressBar}>
                     <progress value={progress} max="100"></progress>
