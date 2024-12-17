@@ -49,8 +49,7 @@
     color: #888;
 }
 
-.inputWrapper,
-.dateWrapper {
+.inputWrapper {
     position: relative;
     width: 100%;
 }
@@ -119,4 +118,39 @@
 
 .reactQuill div {
     border: none !important;
+}
+
+/* Default: Large devices such as laptops, computers (greater than 1024px) */
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+    /*no use here*/
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top: 1rem;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .input {
+        gap: 5px;
+    }
+
+    .selectWrapper select {
+        padding: 15px;
+        background-color: #fff;
+    }
+
+    .dateWrapper input {
+        background-color: #fff;
+    }
+
 }

@@ -75,7 +75,7 @@
     font-size: 1rem;
 }
 
-input {
+.input {
     flex: 2;
     padding: 15px;
     margin-left: 10px;
@@ -85,7 +85,7 @@ input {
     width: 100%;
 }
 
-input:focus {
+.input:focus {
     outline: none;
 }
 
@@ -131,4 +131,64 @@ input:focus {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
+}
+
+/* Default: Large devices such as laptops, computers (greater than 1024px) */
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+    /*no use here*/
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top: 1rem;
+    }
+
+    .label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .selectWrapper select {
+        flex: 1;
+        padding: 15px 10px;
+        font-size: 0;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+
+        @media only screen and (min-width: 500px) {
+            font-size: 0.8rem;
+            padding-left: 35px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            padding-left: 45px;
+        }
+    }
+
+    .selectWrapper select option {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .platformIcon {
+        left: 15px;
+        margin-right: 10px;
+        font-size: 1rem;
+    }
+
+    .input {
+        flex: 2;
+        padding: 10px;
+        margin-left: 5px;
+    }
+
+    .removeIcon {
+        font-size: 1.5rem;
+        padding: calc(34px - 1.5rem);
+    }
+
 }

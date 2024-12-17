@@ -12,6 +12,6 @@
     height: 10vh;
     max-height: 50px;
     width: 100%;
-    border: 1px solid var(--borderGrey);
+    border-top: 1px solid var(--borderGrey);
     color: rgb(134, 134, 134);
 }

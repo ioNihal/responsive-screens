@@ -26,6 +26,7 @@
     position: relative;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     padding: 1px 0;
+    box-sizing: border-box;
 }
 
 .inputWrapper:active,
@@ -78,6 +79,14 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    @media only screen and (min-width: 500px) {
+        flex: 2;
+    }
+
+    @media only screen and (min-width: 680px) {
+        flex: 1;
+    }
 }
 
 .platformIcon {
@@ -109,8 +118,8 @@
     pointer-events: none;
 }
 
-.inputWrapper>input {
-    padding-left: 35px;
+.address {
+    padding-left: 40px !important;
 }
 
 .location,
@@ -118,30 +127,28 @@
     padding-left: 15px !important;
 }
 
-@media (max-width: 600px) {
-    .row {
-        margin-bottom: 10px;
+/* Default: Large devices such as laptops, computers (greater than 1024px) */
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+    /*no use here*/
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top: 1rem;
     }
 
-    .inputWrapper {
-        flex-direction: column;
-        align-items: flex-start;
+
+    .inputWrapper input {
+        padding: 10px;
+        font-size: 1rem;
     }
 
-    .inputWrapper input,
     .inputWrapper select {
-        width: 100%;
-    }
-
-    .platformIcon {
-        position: relative;
-        left: 0;
-    }
-
-    .arrow {
-        position: relative;
-        right: 0;
-        top: 0;
-        transform: none;
+        font-size: 0px;
+        padding: 5px 35px;
+        font-size: 1rem;
     }
 }

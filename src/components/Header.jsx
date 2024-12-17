@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className={styles.container}>
             <div className={styles.title}>
-                <PiSuitcaseSimpleLight color="var(--blue)" size={"2rem"} />
+                <PiSuitcaseSimpleLight className={styles.logo} />
                 <span>MyJob</span>
             </div>
             <div className={styles.progressContainer}>

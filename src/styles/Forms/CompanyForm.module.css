@@ -161,92 +161,53 @@
 }
 
 
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+/* Default: Large devices such as laptops, computers (greater than 1024px) */
 
-    .uploads {
-        flex-direction: column;
-    }
-
-    .logoUpload,
-    .bannerUpload {
-        min-width: 100%;
-    }
-
-    .uploadIcon {
-        font-size: 2rem;
-    }
-
-    .uploadText {
-        font-size: 1rem;
-    }
-
-    .uploadInfo {
-        font-size: 0.9rem;
-    }
-
-    .label {
-        padding: 30px 20px;
-        height: 120px;
-    }
-
-    .companyNama input {
-        font-size: 0.9rem;
-    }
-
-    .aboutUs label {
-        font-size: 1.1rem;
-    }
-
-    .ReactQuill {
-        font-size: 0.9rem;
-    }
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+    /*no use here*/
 }
 
-@media (max-width: 480px) {
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
     .container {
-        padding: 10px;
+        gap: 10px;
+        margin-top: 1rem;
+    }
+
+    .uploadsCon {
+        gap: 1rem;
+        margin-bottom: 1rem;
     }
 
     .uploads {
-        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 1rem;
     }
 
-    .logoUpload,
-    .bannerUpload {
-        min-width: 100%;
-    }
-
-    .uploadIcon {
-        font-size: 2.5rem;
-    }
-
-    .uploadText {
-        font-size: 1.1rem;
+    .uploads span {
+        font-size: 0.5rem;
     }
 
     .uploadInfo {
+        font-size: 0.5rem;
+    }
+
+    .uploadIcon {
         font-size: 1rem;
     }
 
-    .label {
-        padding: 25px 20px;
-        height: 100px;
+    .uploadText {
+        font-size: 0.5rem;
     }
 
-    .companyNama input {
-        font-size: 0.9rem;
-        padding: 12px;
+    .companyName {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .aboutUs label {
-        font-size: 1.2rem;
-    }
-
-    .ReactQuill {
-        min-height: 180px;
-        font-size: 1rem;
+        margin-bottom: 0;
     }
 }

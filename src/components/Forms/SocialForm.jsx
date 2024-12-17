@@ -83,6 +83,7 @@ const SocialForm = () => {
                                 placeholder="Profile link/url..."
                                 value={link.url}
                                 onChange={(e) => handleInputChange(index, e)}
+                                className={styles.input}
                             />
 
                         </div>

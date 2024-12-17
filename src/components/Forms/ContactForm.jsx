@@ -62,6 +62,7 @@ const ContactForm = () => {
                         id="email"
                         placeholder="Email address"
                         required
+                        className={styles.address}
                     />
                     <TfiEmail className={styles.inputIcon} />
                 </div>

@@ -14,6 +14,11 @@
     gap: 1rem;
 }
 
+.logo {
+    font-size: 2rem;
+    color: var(--blue);
+}
+
 .title span {
     font-family: "Public Sans", serif;
     font-optical-sizing: auto;
@@ -75,32 +80,28 @@
     border-radius: 20px;
 }
 
-@media (max-width: 768px) {
+/* Default: Large devices such as laptops, computers (greater than 1024px) */
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+    /*no use here*/
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
-        align-items: flex-start;
+        margin: 1rem auto 2rem auto;
+        width: 100vw;
+        gap: 5rem;
     }
 
-    .title span {
-        font-size: 1.3rem;
+    .title {
+        width: 90%;
+        gap: 0.5rem;
     }
 
     .progressContainer {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .progressInfo {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .title span {
-        font-size: 1.1rem;
-    }
-
-    .progressInfo {
-        font-size: 0.7rem;
+        width: 90%;
     }
 }

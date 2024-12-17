@@ -19,38 +19,16 @@ header, footer {
 }
 
 
-@media (max-width: 768px) {
-  #root {
-    padding: 10px;
-  }
-  
-  header {
-    font-size: 1.2em;
-  }
-  
-  footer {
-    font-size: 0.9em;
-  }
-  
-  .form-container {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-  }
+/* Default: Large devices such as laptops, computers (greater than 1024px) */
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+  /*no use here*/
 }
 
-
-@media (max-width: 480px) {
-  header {
-    font-size: 1em;
-  }
-  
-  footer {
-    font-size: 0.8em;
-  }
-
-  .form-container {
-    width: 100%;
-    max-width: 400px;
-  }
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+   *::-webkit-scrollbar {
+    display: none;
+   }
 }
