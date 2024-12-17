@@ -72,7 +72,9 @@
 .progressBar progress::-webkit-progress-value {
     background-color: rgb(0, 89, 255);
     border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .progressBar progress::-moz-progress-bar {
@@ -84,7 +86,20 @@
 
 /* Medium devices such as tablets (1024px or lesser) */
 @media only screen and (max-width: 1024px) {
-    /*no use here*/
+    .container {
+        flex-direction: row;
+        margin: 1rem auto 2rem auto;
+        width: 100vw;
+        gap: 1rem;
+    }
+
+    .title {
+        margin-left: 2rem;
+    }
+
+    .progressContainer {
+        margin-right: 2rem;
+    }
 }
 
 /* Small devices such as phones (768px or lesser) */
@@ -103,5 +118,6 @@
 
     .progressContainer {
         width: 90%;
+        margin: auto;
     }
 }

@@ -137,7 +137,17 @@
 
 /* Medium devices such as tablets (1024px or lesser) */
 @media only screen and (max-width: 1024px) {
-    /*no use here*/
+    .selectWrapper select {
+        flex: 1;
+        padding: 15px 40px;
+        font-size: 1rem;
+    }
+
+    .input {
+        flex: 2;
+        padding: 10px;
+        margin-left: 5px;
+    }
 }
 
 /* Small devices such as phones (768px or lesser) */
@@ -155,9 +165,6 @@
         flex: 1;
         padding: 15px 10px;
         font-size: 0;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
 
         @media only screen and (min-width: 500px) {
             font-size: 0.8rem;

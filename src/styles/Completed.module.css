@@ -31,6 +31,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 1.3rem;
 }
 
 .paragraph {
@@ -85,4 +86,62 @@ p {
 
 .postBtn:hover {
     background-color: rgb(0, 92, 230);
+}
+
+/* Default: Large devices such as laptops, computers (greater than 1024px) */
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+    /*no use here*/
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+    .container {
+        gap: 2rem;
+        min-height: 50vh;
+        margin: auto 0;
+        justify-content: flex-start;
+    }
+
+    .checkWrapper {
+        padding: 25px;
+    }
+
+    .check {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        gap: 5px;
+        font-size: 0.7rem;
+    }
+
+    .paragraph {
+        width: 50%;
+    }
+
+    p {
+        line-height: 10px;
+        font-size: 0.6rem;
+    }
+
+    .btnWrapper {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .dashboardBtn,
+    .postBtn {
+        padding: 10px 25px;
+        font-size: 0.8rem;
+    }
+
+    .postBtn {
+        gap: 5px;
+        padding: 15px 35px;
+    }
+
+
 }
