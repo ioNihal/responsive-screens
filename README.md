@@ -49,6 +49,29 @@ To run this project locally, follow these steps:
 3. **Custom Inputs and Select Boxes**:
    - Limited customization options made styling input fields and select boxes slightly restrictive.
 
+## Samples
+
+### Screen 1
+
+![Screen 1](./public/samples/screen1.png)
+
+### Screen 2
+
+![Screen 2](./public/samples/screen2.png)
+
+### Screen 3
+
+![Screen 3](./public/samples/screen3.png)
+
+### Screen 4
+
+![Screen 4](./public/samples/screen4.png)
+
+### Screen 5
+
+![Screen 5](./public/samples/screen5.png)
+
+
 ## Acknowledgments
 
 Thank you for taking the time to review my project. I hope you find my work meets the expectations for this internship assessment.
